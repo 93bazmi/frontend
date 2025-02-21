@@ -3,13 +3,30 @@ import '../styles/LoginSignup.css';
 import email_icon from '../assets/email.png'
 import password_icon from '../assets/password.png'
 import user_icon from '../assets/user.png'
+import { useNavigate } from 'react-router-dom';
 
 function LoginSignup() {
+
+    const navigate = useNavigate();
 
     const [action,setAction] = useState("Login");
 
     const [email,setEmail]  = useState('');
     const [password,setPassword] = useState('');
+
+    // Handle login click
+    const handleLogin = () => {
+        if (action === "Login") {
+            navigate('/information'); // Redirect to Information page
+        } else {
+            setAction("Login"); // Just switch to Login mode
+        }
+    };
+
+    //submit function
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
 
   return (
     <div className='container'>
@@ -28,11 +45,19 @@ function LoginSignup() {
 
             <div className='input'>
                 <img src={email_icon} alt=''></img>
-                <input type='email' placeholder='Email ID' value={email} onChange={e => setEmail(e.target.value)}></input>
+                <input 
+                    type='email' 
+                    placeholder='Email ID' 
+                    value={email} 
+                    onChange={e => setEmail(e.target.value)}></input>
             </div>
             <div className='input'>
                 <img src={password_icon} alt=''></img>
-                <input type='password' placeholder='Password'></input>
+                <input 
+                    type='password' 
+                    placeholder='Password'
+                    value={password}
+                    onChange={e => setPassword(e.target.value)}></input>
             </div>
         </div>
 
@@ -41,10 +66,36 @@ function LoginSignup() {
         <div className="forgot-password">Forgot Password? <span>Click here!</span></div>}
         
         <div className="submit-container">
-            <div className={action==="Sign Up"?"submit gray":"submit"} onClick={()=>{setAction("Login")}}>Login</div>
-            <div className={action==="Login"?"submit gray":"submit"} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>
+            {/* ปุ่ม Login */}
+            <div 
+                className={action==="Sign Up" ? "submit gray" : "submit"} 
+                onClick={() => { 
+                    if (action === "Sign Up") {
+                        setAction("Login"); // ถ้ายังอยู่ที่ Sign Up ให้เปลี่ยนเป็น Login
+                    } else {
+                        navigate('/information'); // ถ้าอยู่ที่ Login แล้ว ให้ไปที่หน้า /information
+                    }
+                }}
+            >
+                Login
+            </div>
+
+            {/* ปุ่ม Sign Up */}
+            <div 
+                className={action==="Login" ? "submit gray" : "submit"} 
+                onClick={() => { 
+                    if (action === "Login") {
+                        setAction("Sign Up"); // ✅ เปลี่ยน UI เป็น Sign Up
+                    } else {
+                        navigate('/information'); // ✅ ถ้าอยู่ที่ Sign Up แล้ว ให้ไปหน้า /information
+                    }
+                }}
+            >
+                Sign Up
+            </div>
         </div>
     </div>
+    
   )
 }
 
