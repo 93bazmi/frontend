@@ -1,0 +1,119 @@
+/* GraduateForm.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8eaea;
+}
+
+/* โครงสร้างของหน้า */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #b57373;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: lightgray;
+    margin-bottom: 10px;
+}
+
+.sidebar h3 {
+    margin: 5px 0;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: #f1f1f1;
+    color: black;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu button:hover {
+    background-color: #ddd;
+}
+
+/* พื้นที่หลักด้านขวา */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.search-bar {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #b57373;
+    color: white;
+    border-radius: 5px;
+}
+
+.search-bar::placeholder {
+    color: white;
+}
+
+/* การตั้งค่าปุ่มใน Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.navbar button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #b57373;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.navbar button:hover {
+    background-color: #954848;
+}
+
+/* ตั้งค่าการแสดงฟอร์ม */
+.form-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #b57373;
+}

@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdeceb; /* สีพื้นหลัง */
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .account-options {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .account-card {
+    width: 150px;
+    height: 180px;
+    background-color: #b85c5c; /* สีพื้นหลังของการ์ด */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  .account-card:hover {
+    background-color: #a04d4d;
+    transform: scale(1.05);
+  }
+  
+  .account-card p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .privacy-policy {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .privacy-policy a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .continue-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .continue-btn:hover {
+    background-color: lightgray;
+  }
+  
