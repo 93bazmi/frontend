@@ -205,17 +205,6 @@ function GraduateForm() {
                                 </div>
                             </div>
 
-                            {/* Current Academic Year */}
-                            <div>
-                                <label className="block text-gray-700 font-medium mb-2">Current Academic Year</label>
-                                <input
-                                    type="text"
-                                    name="current_ademic_year"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
-                                    placeholder="Enter your current academic year"
-                                />
-                            </div>
-
                             {/* Extracurricular Activities */}
                             <div>
                                 <label className="block text-gray-700 font-medium ">Extracurricular Activities</label>
