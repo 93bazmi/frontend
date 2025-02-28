@@ -22,7 +22,7 @@ function ProfileLayout({ children }) {
   return (
     <div className="flex">
       <ProfileNavbar /> 
-      <div className="flex-1 p-4">{children}</div> 
+      <div className="flex-1">{children}</div> 
     </div>
   );
 }
@@ -36,6 +36,8 @@ function AppRoutes() {
       <Route path="/select-role" element={<SelectRole />} />
       <Route path="/graduate-form" element={<GraduateForm />} />
       <Route path='/student-form' element={<StudentForm />} />
+
+
 
       {/* ใช้ ProfileNavbar */}
       <Route path="/dashboard" element={<ProfileLayout><Dashboard /></ProfileLayout>} />

@@ -33,7 +33,7 @@ function CompanyMembers() {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 bg-[#FEEDED] min-h-screen">
       {/* Header with Back Button and Search in the same line */}
       <div className="relative flex items-center mt-4 mb-10">
         {/* Back Button - positioned absolutely on the left */}
@@ -48,7 +48,7 @@ function CompanyMembers() {
 
         {/* Search Bar - exactly w-1/2 and centered */}
         <div className="w-full flex justify-center">
-          <div className="w-3/5 flex items-center border rounded-lg p-2">
+          <div className="w-3/5 flex items-center border rounded-lg p-2 bg-white">
             <input
               type="text"
               placeholder="Search company..." // Change placeholder text

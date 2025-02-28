@@ -23,12 +23,12 @@ function FacultySearch() {
   };
 
   return (
-    <div className="p-4">
-      <div className="mt-4 mb-10 flex items-center border rounded-lg p-2 w-3/5 mx-auto">
+    <div className="p-4 bg-[#FEEDED] min-h-screen">
+      <div className="mt-4 mb-10 flex items-center border rounded-lg p-2 w-3/5 mx-auto bg-white">
         <input
           type="text"
           placeholder="Search faculty..."
-          className="w-full p-2 outline-none"
+          className="w-full p-2 outline-none "
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />

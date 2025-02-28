@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import GraduateNavbar from '../components/ui/GraduateNavbar'; // Import FormNavbar
+import { useNavigate } from "react-router-dom";
+
 
 function GraduateForm() {
     const [activeTab, setActiveTab] = useState("personal");
     const [internStatus, setInternStatus] = useState("");
     const [careerStatus, setCareerStatus] = useState("");
+
+    const navigate = useNavigate();
 
     const handleStatusChange = (e) => {
         setInternStatus(e.target.value);
@@ -12,10 +16,10 @@ function GraduateForm() {
     };
 
     return (
-        <div className="flex">
+        <div className="flex bg-[#FEEDED]">
             <GraduateNavbar activeTab={activeTab} onTabChange={setActiveTab} />
             {/* Main Form Content */}
-            <div className="w-full max-w-3xl mx-auto p-6 bg-gray-50 rounded-lg shadow-lg">
+            <div className="w-full max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg">
                 <h1 className="text-3xl font-semibold text-gray-800 text-center mb-6">
                     Please Enter Your Information
                 </h1>
@@ -30,7 +34,7 @@ function GraduateForm() {
                                 <input
                                     type="text"
                                     name="firstName"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your first name"
                                 />
                             </div>
@@ -41,7 +45,7 @@ function GraduateForm() {
                                 <input
                                     type="text"
                                     name="lastName"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your last name"
                                 />
                             </div>
@@ -52,7 +56,7 @@ function GraduateForm() {
                                 <input
                                     type="text"
                                     name="studentCode"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your student code"
                                 />
                             </div>
@@ -62,11 +66,11 @@ function GraduateForm() {
                                 <label className="block text-gray-700 font-medium mb-2">Gender</label>
                                 <div className="flex items-center gap-6 mt-2">
                                     <label className="flex items-center space-x-2">
-                                        <input type="radio" name="gender" value="male" className="accent-rose-500" />
+                                        <input type="radio" name="gender" value="male" className="accent-[#b24e50]" />
                                         <span>Male</span>
                                     </label>
                                     <label className="flex items-center space-x-2">
-                                        <input type="radio" name="gender" value="female" className="accent-rose-500" />
+                                        <input type="radio" name="gender" value="female" className="accent-[#b24e50]" />
                                         <span>Female</span>
                                     </label>
                                 </div>
@@ -78,7 +82,7 @@ function GraduateForm() {
                                 <div className="flex gap-2 mt-2">
                                     <select
                                         name="day"
-                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     >
                                         <option value="">Day</option>
                                         {[...Array(31)].map((_, index) => (
@@ -88,7 +92,7 @@ function GraduateForm() {
 
                                     <select
                                         name="month"
-                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     >
                                         <option value="">Month</option>
                                         {["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"].map((month, index) => (
@@ -98,7 +102,7 @@ function GraduateForm() {
 
                                     <select
                                         name="year"
-                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     >
                                         <option value="">Year</option>
                                         {[...Array(100)].map((_, index) => (
@@ -114,7 +118,7 @@ function GraduateForm() {
                                 <input
                                     type="email"
                                     name="email"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your email"
                                 />
                             </div>
@@ -125,7 +129,7 @@ function GraduateForm() {
                                 <input
                                     type="tel"
                                     name="phoneNumber"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your phone number"
                                 />
                             </div>
@@ -133,7 +137,7 @@ function GraduateForm() {
 
                         <div className="mt-6 flex justify-end">
                             <button
-                            className="px-8 py-3 bg-rose-500 text-white font-semibold rounded-lg shadow-md hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-opacity-50"
+                            className="px-8 py-3 bg-[#b24e50] text-white font-semibold rounded-lg shadow-md hover:bg-[#a35f5f] focus:outline-none focus:ring-2 focus:ring-[#b24e50d3] focus:ring-opacity-50 cursor-pointer" 
                             onClick={() => setActiveTab("academic")}
                             >
                                 Next
@@ -153,7 +157,7 @@ function GraduateForm() {
                                 <input
                                     type="text"
                                     name="faculty"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your faculty"
                                 />
                             </div>
@@ -164,7 +168,7 @@ function GraduateForm() {
                                 <input
                                     type="text"
                                     name="major"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your major"
                                 />
                             </div>
@@ -175,7 +179,7 @@ function GraduateForm() {
                                 <div className="flex gap-2 mt-2">
                                     <select
                                         name="day"
-                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     >
                                         <option value="">Day</option>
                                         {[...Array(31)].map((_, index) => (
@@ -185,7 +189,7 @@ function GraduateForm() {
 
                                     <select
                                         name="month"
-                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     >
                                         <option value="">Month</option>
                                         {["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"].map((month, index) => (
@@ -195,7 +199,7 @@ function GraduateForm() {
 
                                     <select
                                         name="year"
-                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     >
                                         <option value="">Year</option>
                                         {[...Array(100)].map((_, index) => (
@@ -212,7 +216,7 @@ function GraduateForm() {
                                 <input
                                     type="text"
                                     name="extracural_activities"
-                                    className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your extracurricular activities . . ."
                                 />
                             </div>
@@ -223,7 +227,7 @@ function GraduateForm() {
                                 <input
                                     type="text"
                                     name="project_and_research"
-                                    className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your academic projects & research work . . ."
                                 />
                             </div>
@@ -231,13 +235,13 @@ function GraduateForm() {
 
                         <div className="mt-6 flex justify-between">
                             <button
-                                className="px-8 py-3 bg-gray-500 text-white font-semibold rounded-lg shadow-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50"
+                                className="px-8 py-3 bg-gray-400 text-white font-semibold rounded-lg shadow-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 cursor-pointer"
                                 onClick={() => setActiveTab("personal")}
                             >
                                 Back
                             </button>
                             <button
-                                className="px-8 py-3 bg-rose-500 text-white font-semibold rounded-lg shadow-md hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-opacity-50"
+                                className="px-8 py-3 bg-[#b24e50] text-white font-semibold rounded-lg shadow-md hover:bg-[#a35f5f] focus:outline-none focus:ring-2 focus:ring-[#b24e50d3] focus:ring-opacity-50 cursor-pointer"
                                 onClick={() => setActiveTab("internship")}
                             >
                                 Next
@@ -259,7 +263,7 @@ function GraduateForm() {
                                                 type="radio"
                                                 name="status-intern"
                                                 value="completed"
-                                                className="accent-rose-500"
+                                                className="accent-[#b24e50]"
                                                 onChange={handleStatusChange}
                                             />
                                             <span>Internship Completed</span>
@@ -269,7 +273,7 @@ function GraduateForm() {
                                                 type="radio"
                                                 name="status-intern"
                                                 value="uncomplete"
-                                                className="accent-rose-500"
+                                                className="accent-[#b24e50]"
                                                 onChange={handleStatusChange}
                                             />
                                             <span>No Internship Experience</span>
@@ -288,7 +292,7 @@ function GraduateForm() {
                                             <input
                                                 type="text"
                                                 name="company_intern"
-                                                className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                                className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                                 placeholder="Enter your company / organization for internship"
                                             />
                                         </div>
@@ -299,7 +303,7 @@ function GraduateForm() {
                                             <input
                                                 type="text"
                                                 name="intern_position"
-                                                className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                                className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                                 placeholder="Enter your internship position"
                                             />
                                         </div>
@@ -310,7 +314,7 @@ function GraduateForm() {
                                             <input
                                                 type="text"
                                                 name="intern_duration"
-                                                className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                                className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                                 placeholder="Enter your internship duration"
                                             />
                                         </div>
@@ -321,7 +325,7 @@ function GraduateForm() {
                                             <input
                                                 type="text"
                                                 name="intern_task"
-                                                className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                                className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                                 placeholder="Enter your responsibilities and tasks . . ."
                                             />
                                         </div>
@@ -332,7 +336,7 @@ function GraduateForm() {
                                             <input
                                                 type="text"
                                                 name="intern_experience"
-                                                className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                                className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                                 placeholder="Enter your feedback on internship experience . . ."
                                             />
                                         </div>
@@ -341,13 +345,13 @@ function GraduateForm() {
 
                                         <div className="mt-6 flex justify-between">
                                             <button
-                                                className="px-8 py-3 bg-gray-500 text-white font-semibold rounded-lg shadow-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50"
+                                                className="px-8 py-3 bg-gray-400 text-white font-semibold rounded-lg shadow-md hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 cursor-pointer"
                                                 onClick={() => setActiveTab("academic")}
                                             >
                                                 Back
                                             </button>
                                             <button
-                                                className="px-8 py-3 bg-rose-500 text-white font-semibold rounded-lg shadow-md hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-opacity-50"
+                                                className="px-8 py-3 bg-[#b24e50] text-white font-semibold rounded-lg shadow-md hover:bg-[#a35f5f] focus:outline-none focus:ring-2 focus:ring-[#b24e50d3] focus:ring-opacity-50 cursor-pointer"
                                                 onClick={() => setActiveTab("career")}
                                             >
                                                 Next
@@ -359,7 +363,8 @@ function GraduateForm() {
                                 {/* Proceed to next page if "No Internship Experience" is selected */}
                                 {internStatus === "uncomplete" && (
                                     <div className="mt-6">
-                                        <button className="px-8 py-3 bg-rose-500 text-white font-semibold rounded-lg shadow-md hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-opacity-50">
+                                        <button className="px-8 py-3 bg-[#b24e50] text-white font-semibold rounded-lg shadow-md hover:bg-[#a35f5f] focus:outline-none focus:ring-2 focus:ring-[#b24e50d3] focus:ring-opacity-50 cursor-pointer"
+                                        onClick={() => setActiveTab("career")}>
                                             Next
                                         </button>
                                     </div>
@@ -385,7 +390,7 @@ function GraduateForm() {
                                             type="radio"
                                             name="status-career"
                                             value="employed"
-                                            className="accent-rose-500"
+                                            className="accent-[#b24e50]"
                                             onChange={handleStatusChange}
                                         />
                                         <span>Employed</span>
@@ -395,7 +400,7 @@ function GraduateForm() {
                                             type="radio"
                                             name="status-career"
                                             value="studying"
-                                            className="accent-rose-500"
+                                            className="accent-[#b24e50]"
                                             onChange={handleStatusChange}
                                         />
                                         <span>Pursuing Further Education</span>
@@ -405,7 +410,7 @@ function GraduateForm() {
                                             type="radio"
                                             name="status-career"
                                             value="unemployed"
-                                            className="accent-rose-500"
+                                            className="accent-[#b24e50]"
                                             onChange={handleStatusChange}
                                         />
                                         <span>Unemployed</span>
@@ -424,7 +429,7 @@ function GraduateForm() {
                                             <input
                                                 type="text"
                                                 name="company_career"
-                                                className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                                className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                                 placeholder="Enter your company / organization name"
                                             />
                                         </div>
@@ -435,7 +440,7 @@ function GraduateForm() {
                                             <input
                                                 type="text"
                                                 name="career_position"
-                                                className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                                className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                                 placeholder="Enter your job position"
                                             />
                                         </div>
@@ -446,7 +451,7 @@ function GraduateForm() {
                                             <div className="flex gap-2 mt-2">
                                                 <select
                                                     name="day"
-                                                    className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                                    className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                                 >
                                                     <option value="">Day</option>
                                                     {[...Array(31)].map((_, index) => (
@@ -456,7 +461,7 @@ function GraduateForm() {
 
                                                 <select
                                                     name="month"
-                                                    className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                                    className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                                 >
                                                     <option value="">Month</option>
                                                     {["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"].map((month, index) => (
@@ -466,7 +471,7 @@ function GraduateForm() {
 
                                                 <select
                                                     name="year"
-                                                    className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                                    className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                                 >
                                                     <option value="">Year</option>
                                                     {[...Array(100)].map((_, index) => (
@@ -482,7 +487,7 @@ function GraduateForm() {
                                             <input
                                                 type="text"
                                                 name="career_task"
-                                                className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                                className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                                 placeholder="Enter your responsibilities and tasks . . ."
                                             />
                                         </div>
@@ -493,7 +498,7 @@ function GraduateForm() {
                                             <input
                                                 type="text"
                                                 name="job_experience"
-                                                className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                                className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                                 placeholder="Enter your feedback on work experience . . ."
                                             />
                                         </div>
@@ -504,7 +509,8 @@ function GraduateForm() {
                                     </form>
 
                                     <div className="mt-6 flex justify-center items-center">
-                                        <button className="px-8 py-3 bg-rose-500 text-white font-semibold rounded-lg shadow-md hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-opacity-50">
+                                        <button className="px-8 py-3 bg-[#b24e50] text-white font-semibold rounded-lg shadow-md hover:bg-[#a35f5f] focus:outline-none focus:ring-2 focus:ring-[#b24e50d3] focus:ring-opacity-50 cursor-pointer" 
+                                        onClick={() => navigate("/dashboard")}>
                                             Submit
                                         </button>
                                     </div>
@@ -516,7 +522,8 @@ function GraduateForm() {
                             {/* Submit button for "Pursuing Further Education" or "Unemployed" */}
                             {(careerStatus === "studying" || careerStatus === "unemployed") && (
                             <div className="mt-6 flex justify-center items-center">
-                                <button className="px-8 py-3 bg-rose-500 text-white font-semibold rounded-lg shadow-md hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-opacity-50">
+                                <button className="px-8 py-3 bg-[#b24e50] text-white font-semibold rounded-lg shadow-md hover:bg-[#a35f5f] focus:outline-none focus:ring-2 focus:ring-[#b24e50d3] focus:ring-opacity-50 cursor-pointer"
+                                onClick={() => navigate("/dashboard")}>
                                     Submit
                                 </button>
                             </div>

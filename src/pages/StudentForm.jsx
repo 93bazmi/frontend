@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import StudentNavbar from '../components/ui/StudentNavbar'; // Import FormNavbar
+import { useNavigate } from "react-router-dom";
 
 function StudentForm() {
     const [activeTab, setActiveTab] = useState("personal");
     const [internStatus, setInternStatus] = useState("");
     const [careerStatus, setCareerStatus] = useState("");
+
+    const navigate = useNavigate();
 
     const handleStatusChange = (e) => {
         setInternStatus(e.target.value);
@@ -12,10 +15,10 @@ function StudentForm() {
     };
 
     return (
-        <div className="flex">
+        <div className="flex bg-[#FEEDED]">
             <StudentNavbar activeTab={activeTab} onTabChange={setActiveTab} />
             {/* Main Form Content */}
-            <div className="w-full max-w-3xl mx-auto p-6 bg-gray-50 rounded-lg shadow-lg">
+            <div className="w-full max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg">
                 <h1 className="text-3xl font-semibold text-gray-800 text-center mb-6">
                     Please Enter Your Information
                 </h1>
@@ -30,7 +33,7 @@ function StudentForm() {
                                 <input
                                     type="text"
                                     name="firstName"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your first name"
                                 />
                             </div>
@@ -41,7 +44,7 @@ function StudentForm() {
                                 <input
                                     type="text"
                                     name="lastName"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your last name"
                                 />
                             </div>
@@ -52,7 +55,7 @@ function StudentForm() {
                                 <input
                                     type="text"
                                     name="studentCode"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your student code"
                                 />
                             </div>
@@ -62,11 +65,11 @@ function StudentForm() {
                                 <label className="block text-gray-700 font-medium mb-2">Gender</label>
                                 <div className="flex items-center gap-6 mt-2">
                                     <label className="flex items-center space-x-2">
-                                        <input type="radio" name="gender" value="male" className="accent-rose-500" />
+                                        <input type="radio" name="gender" value="male" className="accent-[#b24e50]" />
                                         <span>Male</span>
                                     </label>
                                     <label className="flex items-center space-x-2">
-                                        <input type="radio" name="gender" value="female" className="accent-rose-500" />
+                                        <input type="radio" name="gender" value="female" className="accent-[#b24e50]" />
                                         <span>Female</span>
                                     </label>
                                 </div>
@@ -78,7 +81,7 @@ function StudentForm() {
                                 <div className="flex gap-2 mt-2">
                                     <select
                                         name="day"
-                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     >
                                         <option value="">Day</option>
                                         {[...Array(31)].map((_, index) => (
@@ -88,7 +91,7 @@ function StudentForm() {
 
                                     <select
                                         name="month"
-                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     >
                                         <option value="">Month</option>
                                         {["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"].map((month, index) => (
@@ -98,7 +101,7 @@ function StudentForm() {
 
                                     <select
                                         name="year"
-                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     >
                                         <option value="">Year</option>
                                         {[...Array(100)].map((_, index) => (
@@ -114,7 +117,7 @@ function StudentForm() {
                                 <input
                                     type="email"
                                     name="email"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your email"
                                 />
                             </div>
@@ -125,7 +128,7 @@ function StudentForm() {
                                 <input
                                     type="tel"
                                     name="phoneNumber"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your phone number"
                                 />
                             </div>
@@ -133,7 +136,7 @@ function StudentForm() {
 
                         <div className="mt-6 flex justify-end">
                             <button
-                            className="px-8 py-3 bg-rose-500 text-white font-semibold rounded-lg shadow-md hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-opacity-50"
+                            className="px-8 py-3 bg-[#b24e50] text-white font-semibold rounded-lg shadow-md hover:bg-[#a35f5f] focus:outline-none focus:ring-2 focus:ring-[#b24e50d3] focus:ring-opacity-50 cursor-pointer"
                             onClick={() => setActiveTab("academic")}
                             >
                                 Next
@@ -241,7 +244,8 @@ function StudentForm() {
                         </form>
 
                         <div className="mt-6 flex justify-center items-center">
-                            <button className="px-8 py-3 bg-rose-500 text-white font-semibold rounded-lg shadow-md hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-opacity-50">
+                            <button className="px-8 py-3 bg-[#b24e50] text-white font-semibold rounded-lg shadow-md hover:bg-[#a35f5f] focus:outline-none focus:ring-2 focus:ring-[#b24e50d3] focus:ring-opacity-50 cursor-pointer"
+                            onClick={() => navigate("/dashboard")}>
                                 Submit
                             </button>
                         </div>

@@ -23,7 +23,7 @@ function GraduateNavbar({ activeTab, onTabChange }) {
             <div className={`${
     isCollapsed ? 'w-16' : 'w-64 md:w-72 lg:w-80 xl:w-96'
   } flex flex-col shrink-0 transition-all duration-300 bg-white shadow-lg`}>
-                <div className="bg-red-600 p-4 text-white flex items-center justify-between">
+                <div className="bg-[#b24e50] p-4 text-white flex items-center justify-between">
                     {!isCollapsed && (
                         <div className="flex flex-col items-center w-full">
                             <div className="text-lg font-bold mb-2">Welcome !</div>
