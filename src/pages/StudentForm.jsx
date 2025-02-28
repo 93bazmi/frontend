@@ -156,7 +156,7 @@ function StudentForm() {
                                 <input
                                     type="text"
                                     name="faculty"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your faculty"
                                 />
                             </div>
@@ -167,7 +167,7 @@ function StudentForm() {
                                 <input
                                     type="text"
                                     name="major"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your major"
                                 />
                             </div>
@@ -178,7 +178,7 @@ function StudentForm() {
                                 <div className="flex gap-2 mt-2">
                                     <select
                                         name="day"
-                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     >
                                         <option value="">Day</option>
                                         {[...Array(31)].map((_, index) => (
@@ -188,7 +188,7 @@ function StudentForm() {
 
                                     <select
                                         name="month"
-                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     >
                                         <option value="">Month</option>
                                         {["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"].map((month, index) => (
@@ -198,7 +198,7 @@ function StudentForm() {
 
                                     <select
                                         name="year"
-                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                        className="w-1/3 p-4 rounded-lg border border-gray-300 bg-white text-center focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     >
                                         <option value="">Year</option>
                                         {[...Array(100)].map((_, index) => (
@@ -214,7 +214,7 @@ function StudentForm() {
                                 <input
                                     type="text"
                                     name="current_ademic_year"
-                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full p-4 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your current academic year"
                                 />
                             </div>
@@ -226,7 +226,7 @@ function StudentForm() {
                                 <input
                                     type="text"
                                     name="extracural_activities"
-                                    className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your extracurricular activities . . ."
                                 />
                             </div>
@@ -237,7 +237,7 @@ function StudentForm() {
                                 <input
                                     type="text"
                                     name="project_and_research"
-                                    className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-rose-500 focus:outline-none"
+                                    className="w-full pt-4 pl-4 py-20 rounded-lg border border-gray-300 bg-white focus:ring-2 focus:ring-[#b24e50] focus:outline-none"
                                     placeholder="Enter your academic projects & research work . . ."
                                 />
                             </div>
