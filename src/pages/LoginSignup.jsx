@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function LoginSignup() {
@@ -7,6 +7,7 @@ export default function LoginSignup() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+
 
   const handleSubmit = (e) => {
     e.preventDefault();

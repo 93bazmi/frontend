@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import { Search } from "lucide-react";
 import mockData from "../../src/components/ui/mockData";
 import InfoCard from "../../src/components/ui/InfoCard";
 
 function Dashboard() {
   const [searchTerm, setSearchTerm] = useState("");
+
 
   // Filter data based on search input (searching across faculty, career, and company)
   const filteredResults = mockData.filter((item) =>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {  useState } from 'react';
 import StudentNavbar from '../components/ui/StudentNavbar'; // Import FormNavbar
 import { useNavigate } from "react-router-dom";
 
@@ -19,13 +19,13 @@ function StudentForm() {
             <StudentNavbar activeTab={activeTab} onTabChange={setActiveTab} />
             {/* Main Form Content */}
             <div className="w-full max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-                <h1 className="text-3xl font-semibold text-gray-800 text-center mb-6">
+                <h1 className="text-3xl font-semibold text-gray-800 text-center mb-6 mt-10">
                     Please Enter Your Information
                 </h1>
                 
                 {activeTab === "personal" && (
                     <>
-                        <h2 className="text-xl font-medium text-gray-700 mb-6">Personal Information</h2>
+                        <h2 className="text-xl font-medium text-gray-700 mb-2">Personal Information</h2>
                         <form className="space-y-6">
                             {/* First Name */}
                             <div>
@@ -147,7 +147,7 @@ function StudentForm() {
 
                 {activeTab === "academic" && (
                     <>
-                        <h2 className="text-xl font-medium text-gray-700 mb-6 ">Academic Information</h2>
+                        <h2 className="text-xl font-medium text-gray-700 mb-2 ">Academic Information</h2>
                         <form className="space-y-6">
 
                             {/* Faculty */}

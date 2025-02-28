@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
+
+
+/* Then define your other styles */
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
 
 :root {
   --background: hsl(0 0% 100%);
