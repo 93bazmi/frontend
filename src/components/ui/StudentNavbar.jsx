@@ -17,7 +17,7 @@ function StudentNavbar({ activeTab, onTabChange }) {
     ];
 
     return (
-        <div className="flex h-screen">
+        <div className="flex min-h-screen">
             <div className={`${
     isCollapsed ? 'w-16' : 'w-64 md:w-72 lg:w-80 xl:w-96'
   } flex flex-col shrink-0 transition-all duration-300 bg-white shadow-lg`}>
