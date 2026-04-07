@@ -8,20 +8,34 @@ export default function LoginSignup() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
+  const mockUser = {
+  email: "test@gmail.com",
+  password: "123456"
+};
+
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (isLogin) {
+  e.preventDefault();
+
+  if (isLogin) {
+    if (email === mockUser.email && password === mockUser.password) {
+      localStorage.setItem("user", JSON.stringify({ email }));
       navigate('/select-role');
     } else {
-      if (password !== confirmPassword) {
-        alert("Passwords don't match!");
-        return;
-      }
-      console.log('Sign Up:', { email, password });
-      setIsLogin(true);
+      alert("Invalid email or password");
     }
-  };
+  } else {
+    if (password !== confirmPassword) {
+      alert("Passwords don't match!");
+      return;
+    }
+
+    // mock signup
+    localStorage.setItem("user", JSON.stringify({ email }));
+    alert("Signup success!");
+    setIsLogin(true);
+  }
+};
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-[#FEEDED]">
