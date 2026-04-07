@@ -4,7 +4,7 @@ import LoginSignup from '../pages/LoginSignup';
 import SelectRole from '../pages/SelectRole';
 import StudentForm from '../pages/StudentForm';
 import GraduateForm from '../pages/GraduateForm';
-import Dashboard from '../pages/dashboard';
+import Dashboard from '../pages/Dashboard';
 import InformationProfile from '../components/ui/InformationProfile';
 
 import ProfileNavbar from '../components/ui/HomeNavbar';
