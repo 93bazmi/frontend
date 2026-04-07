@@ -21,7 +21,7 @@ function InfoCard({ item }) {
       />
       <h2 className="text-lg font-semibold">{item.firstname} {item.lastname}</h2>
       <p className="text-gray-600">{item.careerPosition} @ {item.careerCompany}</p>
-      <p className="text-gray-800 font-medium">{item.faculty}</p>
+      <p className="text-gray-800 font-medium">Faculty: {item.faculty}</p>
     </div>
   );
 }

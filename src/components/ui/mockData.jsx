@@ -1,8 +1,8 @@
 export default [
   {
       id: 1,
-      firstname: "First",
-      lastname: "Last",
+      firstname: "Somchai",
+      lastname: "Jaidee",
       faculty: "com",
       major: "software development",
       career: "full stack",
@@ -67,8 +67,8 @@ export default [
   },
   {
       id: 4,
-      firstname: "First",
-      lastname: "Last",
+      firstname: "Nattapon",
+      lastname: "Wiriya",
       faculty: "com",
       major: "software development",
       career: "full stack",
@@ -89,8 +89,8 @@ export default [
   },
   {
       id: 5,
-      firstname: "Jane",
-      lastname: "Doe",
+      firstname: "Orathai",
+      lastname: "Sukjai",
       faculty: "sci",
       major: "data science",
       career: "data analyst",
@@ -111,8 +111,8 @@ export default [
   },
   {
       id: 6,
-      firstname: "John",
-      lastname: "Smith",
+      firstname: "Chayapol",
+      lastname: "Wichakarn",
       faculty: "eng",
       major: "mechanical engineering",
       career: "engineer",
